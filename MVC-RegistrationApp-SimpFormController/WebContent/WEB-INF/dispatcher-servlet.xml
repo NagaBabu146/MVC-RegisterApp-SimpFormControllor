@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+	<!-- cfg Handler Mapping -->
+	<bean id="suhl"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="register.htm">miic</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!--cfg controller -->
+	<bean id="miic" class="com.nt.controller.MenuItemInsertController">
+		<property name="commandName" value="mCmd"></property>
+		<property name="commandClass" value="com.nt.command.MenuDetailsCommand" />
+		<property name="formView" value="register"></property>
+		<property name="successView" value="show_results" />
+		  <constructor-arg ref="mimService"/>
+	</bean>
+	
+	<!-- cfg ViewResolver -->
+	<bean id="vr"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/"/>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+</beans>

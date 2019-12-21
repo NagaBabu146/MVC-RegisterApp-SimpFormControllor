@@ -1,0 +1,8 @@
+CREATE TABLE `menuitems` (
+  `menuId` int(11) NOT NULL,
+  `itemName` varchar(45) DEFAULT NULL,
+  `category` varchar(45) DEFAULT NULL,
+  `price` double DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  `restaurant` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`menuId`))
