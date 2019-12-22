@@ -5,7 +5,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import com.nt.bo.MenuDetailsBO;
 
 public class MenuItemsDAOImpl implements MenuItemsDAO {
-	private static final String MENU_INSERT_QUERY = "INSERT INTO MENUITEMS VALUES(MENUID,ITEMNAME,CATEGORY,PRICE,STATUS,RESTAURANT(?,?,?,?,?.?))";
+	private static final String MENU_INSERT_QUERY = "INSERT INTO MENUITEMS VALUES(MENUID,ITEMNAME,CATEGORY,PRICE,STATUS,RESTAURANT(?,?,?,?,?,?))";
 
 	private JdbcTemplate jt;
 
